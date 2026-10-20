@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>搞钱导航 · 邀请平台导航</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    background: #0d1512;
+    color: #eef5f1;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 28px 18px 48px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 44px; }
+  .brand .logo {
+    width: 46px; height: 46px; border-radius: 12px;
+    background: #2fbf71; color: #08130d;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 800;
+  }
+  .brand .name { font-size: 22px; font-weight: 700; }
+  .eyebrow { color: #2fbf71; letter-spacing: 3px; font-size: 13px; font-weight: 600; margin-bottom: 14px; }
+  h1 { font-size: 38px; line-height: 1.25; margin-bottom: 12px; }
+  .subtitle { color: #9db3a8; font-size: 16px; margin-bottom: 30px; }
+  .searchbar {
+    display: flex; gap: 0; background: #16211c; border: 1px solid #24352c;
+    border-radius: 999px; padding: 6px; margin-bottom: 40px;
+  }
+  .searchbar input {
+    flex: 1; background: transparent; border: none; outline: none;
+    color: #eef5f1; font-size: 15px; padding: 10px 16px; min-width: 0;
+  }
+  .searchbar input::placeholder { color: #6f867b; }
+  .searchbar button {
+    background: #2fbf71; color: #08130d; border: none; cursor: pointer;
+    font-size: 15px; font-weight: 700; padding: 10px 26px; border-radius: 999px;
+  }
+  .section-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
+  .section-head h2 { font-size: 24px; }
+  .section-head .count { color: #9db3a8; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .card {
+    background: #141f1a; border: 1px solid #24352c; border-radius: 16px;
+    padding: 20px; display: flex; flex-direction: column; gap: 8px;
+  }
+  .card h3 { font-size: 19px; }
+  .card .date { color: #6f867b; font-size: 12px; }
+  .card .intro { color: #b9cdc2; font-size: 14px; flex: 1; white-space: pre-line; }
+  .card .note { color: #6f867b; font-size: 12px; }
+  .card .btn {
+    align-self: flex-end; background: #2fbf71; color: #08130d; text-decoration: none;
+    font-weight: 700; font-size: 14px; padding: 9px 20px; border-radius: 999px;
+  }
+  .empty { display: none; color: #9db3a8; text-align: center; padding: 32px 0; }
+  footer {
+    margin-top: 44px; padding-top: 20px; border-top: 1px solid #24352c;
+    color: #6f867b; font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand">
+    <div class="logo">搞</div>
+    <div class="name">搞钱导航</div>
+  </div>
+
+  <div class="eyebrow">● PERSONAL LINKS</div>
+  <h1>发现值得参与的平台</h1>
+  <p class="subtitle">把好用的平台和参与说明，清楚地收在一起。</p>
+
+  <div class="searchbar">
+    <input id="q" type="text" placeholder="搜索平台名称或说明">
+    <button id="searchBtn" type="button">搜索</button>
+  </div>
+
+  <div class="section-head">
+    <h2>平台列表</h2>
+    <span class="count" id="countText">6 个平台</span>
+  </div>
+
+  <div class="grid" id="grid">
+
+    <!-- 平台1 任推邦：邀请链接在下面 a 标签的 href 里 -->
+    <div class="card" data-text="任推邦 网盘拉新 任务多 提现无门槛">
+      <h3>任推邦</h3>
+      <div class="date">更新于 2026/10/19</div>
+      <p class="intro">网盘拉新为主，里面任务很多，提现无门槛。</p>
+      <div class="note">请以平台官方规则为准</div>
+      <a class="btn" href="https://tg.bd.cn/#/pages/login/register?invite_code=2461458&amp;qd=self_team_ios" target="_blank" rel="noopener">立即参与 ↗</a>
+    </div>
+
+    <!-- 平台2 xreign：邀请链接在下面 a 标签的 href 里 -->
+    <div class="card" data-text="xreign 免费 授权X 做任务 点赞 评论">
+      <h3>xreign</h3>
+      <div class="date">更新于 2026/10/19</div>
+      <p class="intro">免费参与，需授权 X，做点赞、评论等简单任务，万一有惊喜呢！</p>
+      <div class="note">请以平台官方规则为准</div>
+      <a class="btn" href="https://xreign.app/login?ref=F5WM5PZ" target="_blank" rel="noopener">立即参与 ↗</a>
+    </div>
+
+    <!-- 平台3 earnlist：邀请链接在下面 a 标签的 href 里 -->
+    <div class="card" data-text="earnlist 做任务 赚U 满50U提现 注册送10U">
+      <h3>earnlist</h3>
+      <div class="date">更新于 2026/10/19</div>
+      <p class="intro">做任务赚 U，满 50U 提现。新台子，11 月 1 日后开通提现通道。注册就送 10U，每个任务 0.1U–0.3U。</p>
+      <div class="note">请以平台官方规则为准</div>
+      <a class="btn" href="https://earnlist.app/r/WlaXd1xX" target="_blank" rel="noopener">立即参与 ↗</a>
+    </div>
+
+    <!-- 平台4 薪火：邀请链接在下面 a 标签的 href 里 -->
+    <div class="card" data-text="薪火 做任务 赚U 满100U提现 蓝V">
+      <h3>薪火</h3>
+      <div class="date">更新于 2026/10/19</div>
+      <p class="intro">做任务赚 U，满 100U 可以提现。平台要求：X 账号为蓝 V 账号，不设最低粉丝数要求，符合条件即可获得平台基础接单资格。</p>
+      <div class="note">请以平台官方规则为准</div>
+      <a class="btn" href="https://xinhuo123.com/auth?ref=C79E080CFD" target="_blank" rel="noopener">立即参与 ↗</a>
+    </div>
+
+    <!-- 平台5 灯塔：目前是官网链接 -->
+    <div class="card" data-text="灯塔 做任务 赚U 满100U提现 严选 蓝V">
+      <h3>灯塔</h3>
+      <div class="date">更新于 2026/10/19</div>
+      <p class="intro">做任务赚 U，满 100U 可以提现。平台没有特别要求，但建议开 X 蓝 V；想接大一点的任务需要申请严选，严选会看近 3 个月发帖流量。授权 X 登录后在任务广场接单，接完点开链接去 X 点赞或评论，做完交验证，建议电脑端操作。</p>
+      <div class="note">请以平台官方规则为准</div>
+      <a class="btn" href="https://app.lhdao.top/" target="_blank" rel="noopener">立即参与 ↗</a>
+    </div>
+
+    <!-- 平台6 tutti：目前是官网链接 -->
+    <div class="card" data-text="tutti 助推赚钱 满20U提现 蓝V 粉丝500 web3 ai">
+      <h3>tutti</h3>
+      <div class="date">更新于 2026/10/19</div>
+      <p class="intro">助推赚钱，满 20U 就能提现。门槛：X 开通蓝 V、粉丝超过 500，达到条件也不是百分百通过。平台主要推广 Web3、AI 项目，会考核发帖内容是否相关。</p>
+      <div class="note">请以平台官方规则为准</div>
+      <a class="btn" href="https://tutti.so/" target="_blank" rel="noopener">立即参与 ↗</a>
+    </div>
+
+  </div>
+
+  <div class="empty" id="emptyText">没有找到匹配的平台，换个关键词试试。</div>
+
+  <footer>搞钱导航 · 仅展示个人整理的平台信息，参与前请自行了解平台规则与风险</footer>
+
+</div>
+
+<script>
+  var q = document.getElementById('q');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var countText = document.getElementById('countText');
+  var emptyText = document.getElementById('emptyText');
+  function doSearch() {
+    var kw = q.value.trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function (card) {
+      var hit = !kw || card.getAttribute('data-text').toLowerCase().indexOf(kw) !== -1
+        || card.textContent.toLowerCase().indexOf(kw) !== -1;
+      card.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    countText.textContent = shown + ' 个平台';
+    emptyText.style.display = shown ? 'none' : 'block';
+  }
+  q.addEventListener('input', doSearch);
+  document.getElementById('searchBtn').addEventListener('click', doSearch);
+</script>
+</body>
+</html>
